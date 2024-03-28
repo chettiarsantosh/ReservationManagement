@@ -1,0 +1,35 @@
+﻿@model ReservationViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+
+    <div class="card-header">
+        Reservation- @Model.ClientName
+    </div>
+
+    <div class="card-body">
+        <div class="mb-3">
+            <label asp-for="ReservationDate" class="form-label"></label>
+            <input asp-for="ReservationDate" class="form-control" readonly="readonly" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="NumberOfGuests" class="form-label"></label>
+            <input asp-for="NumberOfGuests" class="form-control" readonly="readonly" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ClientName" class="form-label"></label>
+            <input asp-for="ClientName" class="form-control" readonly="readonly" />
+        </div>
+
+        <div class="d-grid d-md-flex justify-content-md-end">
+            <a asp-action="index" class="btn btn-secondary me-md-1">Back</a>
+        </div>
+    </div>
+
+</div>
